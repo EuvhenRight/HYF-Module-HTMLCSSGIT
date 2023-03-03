@@ -16,8 +16,8 @@
 
 ### What I will do, because it is not final version:
 
+## already: comments html and css;
+
 ### Mobile version;
 
 ### Hamburger menu;
-
-### Change some classes and added comments;
