@@ -41,14 +41,14 @@
     transition: all .1s ease-in;
  }
 
- .hamburger__checkbox {
+ .topbar__hamburger__nav .hamburger__checkbox {
+    position: absolute;
     display: block;
-    /* position: absolute;
-    top: -7px;
-    left: -5px; */
+    height: 20px;
+    top: 10px;
+    z-index: 5;
+    opacity: 0;
     cursor: pointer;
-    z-index: 2;
-    -webkit-touch-callout: none;
  }
 
  .topbar__hamburger__nav span {
@@ -103,7 +103,10 @@
 
  .hamburger__menu {
     position: absolute;
-    width: 100%;
+    top: 0px;
+    margin-top: 74px;
+    width: 100vw;
+    height: 100vw;
     max-width: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -111,14 +114,17 @@
     list-style-type: none;
 
     transform-origin: 0% 0%;
-    transform: translateY(-150%);
+    transform: translate(0%,-150%);
     -webkit-font-smoothing: antialiased;
-    transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 2s cubic-bezier(0.77,0.2,0.05,1.0);
  }
 
-.hamburger__menu li {
-    padding: 10px 0;
-    font-size: 1.5rem;
+.hamburger__checkbox ~ .hamburger__menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
  }
 
  .hamburger__checkbox:checked ~ ul {
@@ -166,7 +172,7 @@ body {
     z-index: 101;
 }
 
-.topbar__container::before {
+/* .topbar__container::before {
     animation-delay: .4s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -179,7 +185,7 @@ body {
     top: 0;
     transform: translate3d(0,-100%,0);
     z-index: 103;
-}
+} */
 
 .topbar {
 display: grid;
